@@ -16,7 +16,7 @@ import (
 )
 
 // VERSION gets overridden at build time using -X main.VERSION=$VERSION
-var VERSION = "v1.3-kubelet-per-node"
+var VERSION = "vng/v1.3-kubelet-per-node"
 var released = regexp.MustCompile(`^v[0-9]+\.[0-9]+\.[0-9]+$`)
 
 func main() {
