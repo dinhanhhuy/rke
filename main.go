@@ -16,7 +16,7 @@ import (
 )
 
 // VERSION gets overridden at build time using -X main.VERSION=$VERSION
-var VERSION = "dev"
+var VERSION = "v1.3-kubelet-per-node"
 var released = regexp.MustCompile(`^v[0-9]+\.[0-9]+\.[0-9]+$`)
 
 func main() {
@@ -49,7 +49,7 @@ func mainErr() error {
 			metadata.RKEVersion = app.Version
 			return nil
 		}
-		logrus.Warnf("This is not an officially supported version (%s) of RKE. Please download the latest official release at https://github.com/rancher/rke/releases", app.Version)
+		logrus.Warnf("This is not an officially supported version (%s) of RKE. Detail about this version at https://confluence.zalopay.vn/display/ZTM/RKE+Release", app.Version)
 		return nil
 	}
 	app.Author = "Rancher Labs, Inc."
